@@ -1,24 +1,22 @@
-
+import React from "react";
 import Navbar from "./components/Navbar";
 import Categories from "./components/Categories";
 import { Routes, Route } from "react-router-dom";
+import "./index.css";
 
 function App() {
   return (
-  <div className="App">
-      <Header />
+    <div className="App">
       <Navbar />
-    <Routes>
-      <Route exact path="/" element={<h2>Trivia Homepage!</h2>} /> 
-      <Route path="/animals" element={Categories /> } /> 
-    <Route path="/cartoons" element={Categories /> } /> 
-    <Route path= "/geography" element={Categories /> } /> 
-  <Route path= "/history" element={Categories /> } /> 
-  <Route path= "/sports" element={Categories /> } /> 
-  </Routes>
-
+      <Routes>
+        <Route path="/" />
+        <Route path="/animals" element={<Categories categoryId="27" />} />
+        <Route path="/cartoons" element={<Categories categoryId="32" />} />
+        <Route path="/geography" element={<Categories categoryId="22" />} />
+        <Route path="/history" element={<Categories categoryId="23" />} />
+        <Route path="/sports" element={<Categories categoryId="21" />} />
+      </Routes>
     </div>
-  )
+  );
 }
-
 export default App;
