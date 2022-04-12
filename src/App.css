@@ -1,0 +1,16 @@
+a{
+
+  color: red;
+}
+
+nav, h2, h3 {
+display: inline-block;
+}
+
+.hidden{
+  display: none;
+}
+
+.active {
+  display: inline-block;
+}

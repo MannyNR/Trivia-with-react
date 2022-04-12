@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-function Navbar() {
+function Home() {
   return (
     <header>
       <h1>Welcome to Trivia!</h1>
-      <Link to="/"> Home </Link>
       <h4> Select from one of the categories below to start or change into!</h4>
       <nav>
         <h2> [ </h2> <Link to="/animals"> Animals</Link>
@@ -23,4 +22,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Home
