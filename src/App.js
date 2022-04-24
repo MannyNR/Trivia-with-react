@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { getQuestions } from "./services/questions.js";
+import getQuestions2 from "./components/Categories";
 // import Buttons from "./components/Buttons";
 import Navbar from "./components/Navbar";
 import Categories from "./components/Categories";
@@ -16,16 +16,17 @@ function App() {
 
   useEffect(() => {
     let fetchData = async () => {
-      let animalsData = await getQuestions(27);
-      let cartoonsData = await getQuestions(32);
-      let geographyData = await getQuestions(22);
-      let historyData = await getQuestions(23);
-      let sportsData = await getQuestions(21);
-      setAnimals(animalsData);
-      setCartoons(cartoonsData);
-      setGeography(geographyData);
-      setHistory(historyData);
-      setSports(sportsData);
+      // let animalsData = await getQuestions2(27);
+      // let cartoonsData = await getQuestions2(32);
+      // let geographyData = await getQuestions2(22);
+      // let historyData = await getQuestions2(23);
+      // let sportsData = await getQuestions2(21);
+      const test = await getQuestions2();
+      setAnimals(test);
+      setCartoons(test);
+      setGeography(test);
+      setHistory(test);
+      setSports(test);
     };
     fetchData();
   }, []);
@@ -35,11 +36,26 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" />
-        <Route path="/animals" element={<Categories categoryId="27" />} />
-        <Route path="/cartoons" element={<Categories categoryId="32" />} />
-        <Route path="/geography" element={<Categories categoryId="22" />} />
-        <Route path="/history" element={<Categories categoryId="23" />} />
-        <Route path="/sports" element={<Categories categoryId="21" />} />
+        <Route
+          path="/animals"
+          element={<Categories categoryId="27" animals={animals} />}
+        />
+        <Route
+          path="/cartoons"
+          element={<Categories categoryId="32" cartoons={cartoons} />}
+        />
+        <Route
+          path="/geography"
+          element={<Categories categoryId="22" geography={geography} />}
+        />
+        <Route
+          path="/history"
+          element={<Categories categoryId="23" history={history} />}
+        />
+        <Route
+          path="/sports"
+          element={<Categories categoryId="21" sports={sports} />}
+        />
       </Routes>
     </div>
   );
