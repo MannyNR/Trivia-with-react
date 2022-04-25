@@ -51,9 +51,9 @@ function Categories(props) {
       <h3 className="mult">{mult}</h3>
       <br />
       <div className="buttons">
-        <button onClick={() => setShow(!show)}>Show Answer</button>
+        <button onClick={() => setShow(!show)}> Show Answer </button>
         {show ? <h2 className="answer red">{answer}</h2> : null}
-        <button onClick={refresh}>Next Question</button>
+        <button onClick={refresh}> Next Question </button>
       </div>
     </div>
   );
