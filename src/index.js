@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 const container = document.getElementById("app");
 const root = createRoot(container);
-root.render(<App tab="home" />);
+root.render(<App tab='home' />);
 
 root.render(
   <React.StrictMode>
