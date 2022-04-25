@@ -3,13 +3,14 @@ import Navbar from "./components/Navbar";
 import Categories from "./components/Categories";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={""} />
         <Route path="/animals" element={<Categories categoryId="27" />} />
         <Route path="/cartoons" element={<Categories categoryId="32" />} />
         <Route path="/geography" element={<Categories categoryId="22" />} />
