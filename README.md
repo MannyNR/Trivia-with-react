@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Welcome to my Trivia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The Basics
 
-## Available Scripts
+================
 
-In the project directory, you can run:
+A react app utilizing the Tabs UI pattern. API providing the trivia is brought you by [Open Trivia Database](https://github.com/opentdb.com/api_config.php).
 
-### `npm start`
+I decided to make this app as a way to help up my trivia knowledle, especially given trivia nights at bars are great!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+========================
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. First jump into your terminal and make sure to have Node Package Manager Installed (NPM)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install npm@latest -g
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Clone the repo in your desired folder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/MannyNR/Trivia-with-react.git
+```
 
-### `npm run eject`
+3. Jump into the folder
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+cd Trivia-with-react
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Install NPM packages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Run the app
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## View of the homepage
 
-### Code Splitting
+=================================
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Simple landing page, opted to make an array like tab navigation bar instead of the traditional ones we see a lot of online.
 
-### Analyzing the Bundle Size
+![alt text](./public/Home.png "View of the homepage")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### View of a mutilple choice question without revealing the answer
 
-### Making a Progressive Web App
+Once a category is selected you will notice the NavLink will switch active class from Home to the selected choice. We will also see the api call return a question from the category and the "Show Answer" and "Next Question" buttons will appear under the question.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![alt text](./public/MultNoAns.png "View of a mutilple choice question without revealing the answer")
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### True or false question with answer after show answer was pressed
 
-### Deployment
+Once Show answer is pressed you will see it load the answer under the question. It is a toggle button so if you want to quiz someone with the same question you can click on it again to hide the answer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![alt text](./public/TFAns.png "True or false question with answer after show answer was pressed")
 
-### `npm run build` fails to minify
+If you press next question it will provide you the next random question from the api without changing the category and even if the answe is shown on the previous question, the new one wont show the answer until the button is clicked.
+![alt text](./public/TFAns.png "True or false question with answer after show answer was pressed")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## MVP but future plans
+
+=================================
+
+### I would like to continue working on this by adding more categories and perhaps make it into an actual trivia game. The api also has some weird encoding issues that provide some error with special characters like ( & ' "). This is something I couldnt fix given the Json itself has the issue as well and the other encoding options they provide didn't work any better.
+
+---
+
+## Thank you for checking this repo out and please let me know if you would like to see a feature added!
