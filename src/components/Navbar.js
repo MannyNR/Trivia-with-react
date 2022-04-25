@@ -5,8 +5,6 @@ function Navbar() {
   return (
     <header>
       <h1>Welcome to Trivia!</h1>
-      <Link to="/"> Home </Link>
-      <h4> Select from one of the categories below to start or change into!</h4>
       <nav>
       <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/">
             Home
@@ -25,7 +23,6 @@ function Navbar() {
         <h3> </h3> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/history">History</NavLink>
         <h3> , </h3>
         <h3> </h3> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/sports">Sports</NavLink>
-
         <h2> ] </h2>
       </nav>
     </header>
