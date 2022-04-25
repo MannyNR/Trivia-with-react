@@ -54,7 +54,7 @@ function Categories(props) {
         <button onClick={() => setShow(!show)}>Show Answer</button>
         {show ? <h2 className="answer red">{answer}</h2> : null}
         <button onClick={refresh}>Next Question</button>
-        </div>
+      </div>
     </div>
   );
 }
