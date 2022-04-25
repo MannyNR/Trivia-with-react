@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
 
 function Navbar() {
@@ -8,15 +8,24 @@ function Navbar() {
       <Link to="/"> Home </Link>
       <h4> Select from one of the categories below to start or change into!</h4>
       <nav>
-        <h2> [ </h2> <Link to="/animals"> Animals</Link>
+      <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/">
+            Home
+          </NavLink>
+        <br />
+        <h3>
+          Select from one of the categories below to start or change into!
+        </h3>
+        <br />
+        <h2> [ </h2> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/animals"> Animals</NavLink>
         <h3> , </h3>
-        <h3> </h3> <Link to="/cartoons">Cartoons & Animation</Link>
+        <h3> </h3> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/cartoons">Cartoons & Animation</NavLink>
         <h3> , </h3>
-        <h3> </h3> <Link to="/geography">Geography</Link>
+        <h3> </h3> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/geography">Geography</NavLink>
         <h3> , </h3>
-        <h3> </h3> <Link to="/history">History</Link>
+        <h3> </h3> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/history">History</NavLink>
         <h3> , </h3>
-        <h3> </h3> <Link to="/sports">Sports</Link>
+        <h3> </h3> <NavLink className={({isActive}) => (isActive ? 'active' : null)} to="/sports">Sports</NavLink>
+
         <h2> ] </h2>
       </nav>
     </header>
