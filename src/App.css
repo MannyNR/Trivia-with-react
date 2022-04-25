@@ -41,12 +41,12 @@ button {
   justify-content: space-between;
   font-size: clamp(1rem, 4vmin, 2rem);
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: red;
   border-radius: 25px;
   border: 10px solid;
   border-top: none;
   border-bottom: none;
-  border-color: rgb(246, 255, 0);
+  border-color: black;
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 800;
   text-align: center;
