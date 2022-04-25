@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-// import { getQuestions } from "../services/questions.js";
-
-const getQuestions = async (id) => {
-  const response = await axios.get(
-    `https://opentdb.com/api.php?amount=10&category=${id}`
-  );
-
-  return response;
-};
-
 function Categories(props) {
   const [question, setQuestion] = useState();
   const [answer, setAnswer] = useState();
   const [type, setType] = useState();
   const [mult, setMult] = useState();
   const [show, setShow] = useState();
-
 
   useEffect(() => {
     const getQuest = async () => {
@@ -46,8 +35,7 @@ function Categories(props) {
       // console.log(response.data.results[0]);
     };
     getQuest();
-
-
+  }, [props.categoryId]);
   if (!question) return <h3> Loading question...</h3>;
 
   const refresh = () => {
@@ -67,9 +55,7 @@ function Categories(props) {
         {show ? <h2 className="answer red">{answer}</h2> : null}
         <button onClick={refresh}>Next Question</button>
         </div>
-
     </div>
   );
 }
-
 export default Categories;
