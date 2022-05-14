@@ -6,7 +6,7 @@
 
 A react app utilizing the Tabs UI pattern. API providing the trivia is brought you by [Open Trivia Database](https://github.com/opentdb.com/api_config.php).
 
-I decided to make this app as a way to help up my trivia knowledle, especially given trivia nights at bars are great!
+I decided to make this app as a way to help up my trivia knowledge, especially given trivia nights at bars are great!
 
 ---
 
